@@ -13,12 +13,22 @@ import java.util.Scanner;
  */
 public class Menu {
     
+    /**
+     * Imprime el menú de usuario, donde éste podrá elegir entre las 
+     * operaciones de un árbol AVL
+     */
     public static void ArAVL () {
+        
+        ArbolAVL arbol = new ArbolAVL();
+        
         
         Scanner teclado = new Scanner(System.in);
         boolean end = false;
         int opcion; 
-
+        
+        /**
+         * Menú que el usuario verá en pantalla con todas las opciones
+         */
         while (!end) {
             System.out.println("\n\n");
             System.out.println("\t\t\t     __  __  __     __ __             ");
@@ -41,16 +51,31 @@ public class Menu {
             switch (opcion) {
                 case 1:
                     System.out.println("\n ----[Agregar clave]-----");
+                    System.out.println("\n\n ¿Cuantos nodos desea agregar al árbol?");
+                    int nodos = teclado.nextInt();
+                    System.out.println("\nIngrese los elementos:");
+                    for (int i = 0; i < nodos; i++) {                           //for que se repetirá el número de veces que el usuario desee para agregar nodos
+                        int num1 = teclado.nextInt();
+                        arbol.agregar(num1);
+                        
+                    }
                     break;
                 case 2:
                     System.out.println("\n ----[Buscar dato]-----");
+                    System.out.println("\n ¿Que elemento busca?");
+                    int bus = teclado.nextInt();
+                    arbol.buscar(bus);
                     break;
                 case 3:
                     System.out.println("\n ----[Eliminar clave]-----");
+                    System.out.println("\n ¿Que elemento desea eliminar?");
+                    int elem = teclado.nextInt();
+                    arbol.eliminar(elem);
                     break;
                 case 4:
                     System.out.println("\n ----[Imprimir árbol]-----");
-                    
+                    System.out.println("El árbol se imprimirá con BFS");
+                    arbol.breadthFrist(); 
                     break;
                 case 5:
                     System.out.println("REGRESANDO A MENU PRINCIPAL\n\n");
