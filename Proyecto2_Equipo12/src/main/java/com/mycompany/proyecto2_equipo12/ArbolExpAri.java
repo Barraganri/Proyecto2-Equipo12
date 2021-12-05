@@ -58,17 +58,7 @@ public class ArbolExpAri {
                 nodo.setDer(new NodoExpAri());
                 nodo.der.setPadre(nodo);
                 nodo = nodo.der;
-            } else if (!isOperator(caracter) && caracter != ')') {
-                if (i - 1 >= 0) {
-                    if (input.charAt(i - 1) == ')') {
-                        if (nodo.izq == null) {
-                            nodo.izq = new NodoExpAri();
-                            nodo.izq.setPadre(nodo);
-                            nodo = nodo.izq;
-                        }
-                        nodo = nodo.izq;
-                    }
-                }
+            } else if (!isOperator(caracter) && caracter != ')') 
                 nodo.setInfo(caracter);
                 if (nodo.padre == null) {
                     nodo.setPadre(new NodoExpAri());
