@@ -15,13 +15,14 @@ public class NodoExpAri {
     NodoExpAri izq;
     NodoExpAri padre;
 
-    public NodoExpAri() {
+     public NodoExpAri() {
         this.info = ' ';
+        this.der = this.izq = this.padre = null;
     }
 
     public NodoExpAri(char info) {
         this.info = info;
-        this.der = this.izq = null;
+        this.der = this.izq = this.padre = null;
     }
 
     public NodoExpAri getPadre() {
