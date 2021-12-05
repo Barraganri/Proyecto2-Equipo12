@@ -56,8 +56,7 @@ public class Menu {
                     System.out.println("\nIngrese los elementos:");
                     for (int i = 0; i < nodos; i++) {                           //for que se repetirá el número de veces que el usuario desee para agregar nodos
                         int num1 = teclado.nextInt();
-                        arbol.agregar(num1);
-                        
+                        arbol.agregar(num1);  
                     }
                     break;
                 case 2:
