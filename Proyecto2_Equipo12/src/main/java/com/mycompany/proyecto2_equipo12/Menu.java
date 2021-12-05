@@ -158,6 +158,7 @@ public class Menu {
      public static void ArExpAri () {
          
         Scanner teclado = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         boolean end = false;
         int opcion;
         ArbolExpAri arbol = new ArbolExpAri();
@@ -184,7 +185,7 @@ public class Menu {
                     System.out.println("\n\n ----[Ingresar expresión]-----");
                     System.out.println("Ingrese la expresion:");
                     System.out.println("Tome en cuenta los ejemplos dados en el manual");
-                    String input = teclado.nextLine();
+                    String input = in.nextLine();
                     arbol.constArbol(input);
                     break;
                 case 2:
