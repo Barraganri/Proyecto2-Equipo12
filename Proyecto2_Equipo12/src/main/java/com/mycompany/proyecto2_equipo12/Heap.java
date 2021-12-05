@@ -1,17 +1,5 @@
 package com.mycompany.proyecto2_equipo12;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author dani_
- */
-
-
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -26,20 +14,32 @@ import java.util.Queue;
  * @author dani_
  */
 public class Heap {
+    /**
+     * Instanciado de variables
+     */
     NodoHeap root;
     
-    
+    /**
+     *Constructor para la declaración de la clase
+     */
     public Heap(){
         root=null;
     }
 
-
+    /**
+     * Constructor para la declaración de la clase
+     * @param root Nodo que sera la raíz
+     */
     public Heap(NodoHeap root) {
         this.root = root;
     }
 
 
-
+/**
+ * Metodo para agregar un noda al Heap
+ * @param hijo Nodo que se agregara
+ * @param padre Padre del Nodo que se agregara
+ */
     public void agregarNodo(NodoHeap hijo, NodoHeap padre) {
         
         if(root==null){
@@ -77,7 +77,10 @@ public class Heap {
         
   
     }
-    
+    /**
+     * Método para intercambiar nodos dentro del Heap
+     * @param hijo Nodo que se ira cambiando de lugar
+     */
     private void swap(NodoHeap hijo){
          NodoHeap Padre = Padrebusq(hijo);
         while(Padre.valor<hijo.valor){
@@ -90,7 +93,11 @@ public class Heap {
          
          }
    
-    
+    /**
+     * Método para intercambiar la raiz(padre) con su hijo más
+     * grande
+     * @param raiz Nodo raíz del Heap
+     */
     private void swapMayor(NodoHeap raiz){
         if(raiz.izq!=null){
            int izquierda=raiz.izq.valor;
@@ -134,6 +141,9 @@ public class Heap {
         
     }
     
+    /**
+     * Método para eliminar a la raíz por medio del intercambio
+     */
     public void eliminado() {
         
         if (root==null){
@@ -160,13 +170,20 @@ public class Heap {
         root=null;
           return;
     }
-
+/**
+ * Impresión del valor de un Nodo
+ * @param n Nodo visitado
+ */
     protected void visit(NodoHeap n) {
         System.out.println(n.valor + " ");
     }
 
 
-        
+        /**
+         * Método para encontrar al padre de un Nodo
+         * @param buscado Nodo al que se desea buscar el padre
+         * @return Padre del nodo 
+         */
       public NodoHeap Padrebusq(NodoHeap buscado){
             NodoHeap r = root;
         Queue<NodoHeap> queue = new LinkedList();
@@ -193,7 +210,9 @@ public class Heap {
         }
    
 
-
+/**
+ * Impresion BFS del Heap
+ */
     public void breadthFrist(){
         
         if (root==null){
@@ -223,7 +242,12 @@ public class Heap {
         }
     }
     
-    
+    /**
+     * Método utlizado en la eliminación de la raíz para
+     * encontrar al nodo en la ultima posición del Heap 
+     * para remplazar a la raíz
+     * @return Ultimo Nodo de un Heap
+     */
     public NodoHeap ultimo(){
         NodoHeap r = root;
         Queue<NodoHeap> queue = new LinkedList();
@@ -250,4 +274,3 @@ public class Heap {
     }
 
 }
-
