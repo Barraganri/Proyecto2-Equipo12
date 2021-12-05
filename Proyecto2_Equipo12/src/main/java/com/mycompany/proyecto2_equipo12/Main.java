@@ -42,7 +42,7 @@ public class Main {
             System.out.println("\t\t|\t4. Salir  \t\t\t\t|");
             System.out.println("\t\t-------------------------------------------------");
             
-            System.out.println("\nElige una opción1:     ");
+            System.out.println("\nElige una opción1 :D:     ");
             opcion = sn.nextInt();
             
             switch(opcion){
