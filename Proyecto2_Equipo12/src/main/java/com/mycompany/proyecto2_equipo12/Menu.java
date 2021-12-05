@@ -106,15 +106,17 @@ public class Menu {
                     break;
                 case 2:
                     System.out.println("\n\n ----[Eliminar raíz]-----");
-                    System.out.println("\nSe eliminará la raíz: "+heap.root.valor);
-                    heap.eliminado(heap.root); 
+                    if (heap != null) {
+                        heap.eliminado();
+                    } else {
+                        System.out.println("\nEl Heap no existe\n");
+                    } 
                     break;
                 case 3:
-                    System.out.println("\n\n ----[Imprimir raíz]-----");
-                    if (heap != null) {
-                    heap.breadthFrist();
-                    }else{
-                        System.out.println("\nEl árbol no existe\n");
+                   if (heap != null) {
+                        heap.breadthFrist();
+                    } else {
+                        System.out.println("\nEl heap no existe\n");
                     }
                     break;
                 case 4:
