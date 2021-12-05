@@ -136,7 +136,7 @@ public class Menu {
         Scanner teclado = new Scanner(System.in);
         boolean end = false;
         int opcion;
-
+        ArbolExpAri arbol = new ArbolExpAri();
         while (!end) {
             System.out.println("\n\n");
             System.out.println("     __  __  __     __ __   __  __   __    __  __  __ __  __            __  ___     _____  __     ");
@@ -154,17 +154,24 @@ public class Menu {
             
             System.out.println("\nElige una opcion: ");
             opcion = teclado.nextInt();
-            ArbolExpAri arbol = new ArbolExpAri();
+            
             switch (opcion) {
                 case 1:
                     System.out.println("\n\n ----[Ingresar expresión]-----");
-                   
+                    System.out.println("Ingrese la expresion:");
+                    System.out.println("Tome en cuenta los ejemplos dados en el manual");
+                    String input = teclado.nextLine();
+                    arbol.constArbol(input);
                     break;
                 case 2:
                     System.out.println("\n\n ----[Mostrar Árbol]-----");
+                    System.out.println("Impresion de arbol por BFS");
+                    arbol.mostrarArbol();
                     break;
                 case 3:
                     System.out.println("\n\n ----[Resolver]-----");
+                    System.out.println("Solucion:");
+                    arbol.evaluar();
                     break;
                 case 4:
                     System.out.println("REGRESANDO A MENU PRINCIPAL\n\n");
