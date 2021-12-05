@@ -33,9 +33,6 @@ public class Heap {
         root=null;
     }
 
-    public Heap(int val) {
-        root = new NodoHeap(val);
-    }
 
     public Heap(NodoHeap root) {
         this.root = root;
