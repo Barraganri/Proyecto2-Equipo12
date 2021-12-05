@@ -152,7 +152,7 @@ public class Menu {
             
             System.out.println("\nElige una opcion: ");
             opcion = teclado.nextInt();
-
+            ArbolExpAri arbol = new ArbolExpAri();
             switch (opcion) {
                 case 1:
                     System.out.println("\n\n ----[Ingresar expresión]-----");
