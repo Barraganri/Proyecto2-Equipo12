@@ -88,7 +88,7 @@ public class Menu {
             System.out.println("\t\t-------------------------------------------------");
             
             System.out.println("\nElige una opcion: ");
-            opcion = teclado.nextInt();
+            opcion = sc.nextInt();
 
             switch (opcion) {
                 case 1:
