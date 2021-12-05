@@ -10,5 +10,5 @@ package com.mycompany.proyecto2_equipo12;
  * @author Barragan
  */
 public class a {
-    
+    int hola;
 }
