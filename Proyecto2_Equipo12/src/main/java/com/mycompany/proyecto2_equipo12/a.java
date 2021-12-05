@@ -11,4 +11,5 @@ package com.mycompany.proyecto2_equipo12;
  */
 public class a {
     int hola;
+    int val;
 }
