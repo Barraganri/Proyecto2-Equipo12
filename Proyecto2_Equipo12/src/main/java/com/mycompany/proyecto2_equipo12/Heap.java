@@ -58,11 +58,6 @@ public class Heap {
             swap(padre.der);
             return;
         }
-        if (padre.izq == null && padre.der != null) {
-            padre.setIzq(hijo);
-            swap(padre.izq);
-            return;
-        }
 
         if (padre.izq != null && padre.der != null) {
             NodoHeap PadreIzq = padre.izq;
