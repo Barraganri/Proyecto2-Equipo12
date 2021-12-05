@@ -64,9 +64,13 @@ public class Menu {
     
     public static void heap() {
         
-        Scanner teclado = new Scanner(System.in);
+       Scanner sc = new Scanner(System.in);
+        Scanner valNodo = new Scanner(System.in);
         boolean end = false;
         int opcion;
+        int val;
+        Heap heap = null;
+        NodoHeap nodoUni;
 
         while (!end) {
             System.out.println("\n\n");
@@ -89,13 +93,29 @@ public class Menu {
             switch (opcion) {
                 case 1:
                    System.out.println("\n\n ----[Agregar clave]-----");
+                    System.out.println("\nIngresa la clave: ");
+                    val = valNodo.nextInt();
+                    nodoUni = new NodoHeap(val);
+
+                    if (heap != null) {
+                        heap.agregarNodo(nodoUni, heap.root);
+                    } else {
+                        heap = new Heap(nodoUni);
+                    }
 
                     break;
                 case 2:
                     System.out.println("\n\n ----[Eliminar raíz]-----");
+                    System.out.println("\nSe eliminará la raíz: "+heap.root.valor);
+                    heap.eliminado(heap.root); 
                     break;
                 case 3:
                     System.out.println("\n\n ----[Imprimir raíz]-----");
+                    if (heap != null) {
+                    heap.breadthFrist();
+                    }else{
+                        System.out.println("\nEl árbol no existe\n");
+                    }
                     break;
                 case 4:
                     System.out.println("REGRESANDO A MENU PRINCIPAL\n\n");
