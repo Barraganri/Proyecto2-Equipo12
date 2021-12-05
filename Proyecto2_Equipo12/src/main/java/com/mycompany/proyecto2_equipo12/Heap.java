@@ -1,19 +1,31 @@
+package com.mycompany.proyecto2_equipo12;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.proyecto2_equipo12;
+
+/**
+ *
+ * @author dani_
+ */
+
 
 import java.util.LinkedList;
 import java.util.Queue;
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 /**
  *
- * @author tania
+ * @author dani_
  */
 public class Heap {
-   
     NodoHeap root;
     
     
@@ -130,10 +142,17 @@ public class Heap {
         
     }
     
-    public void eliminado(NodoHeap padre) {
-        NodoHeap ultimo=ultimo();
-        NodoHeap pUltimo = Padrebusq(ultimo); 
-     
+    public void eliminado() {
+        
+        if (root==null){
+            System.out.println("\nEl Heap no existe");
+            return;
+        }
+         System.out.println("\nSe eliminará la raíz: " + root.valor);
+        
+        NodoHeap ultimo = ultimo();
+        NodoHeap pUltimo = Padrebusq(ultimo);
+      
         if (pUltimo.izq==ultimo){
             root.setValor(ultimo.valor);
             pUltimo.setIzq(null);
@@ -186,10 +205,10 @@ public class Heap {
     public void breadthFrist(){
         
         if (root==null){
-            System.out.println("\nEl árbol no existe");
+            System.out.println("\nEl Heap no existe");
             return;
         }
-        System.out.println("\nEl heap en BFS: ");
+        System.out.println("\nBFS: ");
         
         NodoHeap r = root;
 	Queue<NodoHeap> queue = new LinkedList();
@@ -239,5 +258,4 @@ public class Heap {
     }
 
 }
-
 
