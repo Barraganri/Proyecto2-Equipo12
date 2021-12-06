@@ -7,7 +7,7 @@ package com.mycompany.proyecto2_equipo12;
  */
 
 /**
- *
+ *Clase que indica todos los atributos de un Nodo
  * @author dani_
  */
 public class NodoHeap {
