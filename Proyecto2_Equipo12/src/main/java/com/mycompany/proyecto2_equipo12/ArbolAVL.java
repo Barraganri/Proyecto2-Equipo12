@@ -205,16 +205,20 @@ public class ArbolAVL {
      * @param nodoActual nodo en el que buscaremos
      * @return 
      */
-    public boolean buscarNodo (int val, AVLNode nodoActual){
+     public boolean buscarNodo (int val, AVLNode nodoActual){
         if (root == null) {
             return false;                                                       //no existe el nodo
-        }else if (nodoActual.valor == val){
+        }
+        if (nodoActual.valor == val){
             return true;                                                        //ya se encontro el dato
-        }else if (nodoActual.valor < val){                                      //si el dato es menor al valor
+        }
+        if (nodoActual.valor < val && nodoActual.der != null){                   //si el dato es menor al valor
             return buscarNodo(val, nodoActual.der);                             //si no se encontro, se busca por la derecha
-        }else{
+        }
+        if (nodoActual.valor > val && nodoActual.izq != null){
             return buscarNodo(val, nodoActual.izq);                             //si es mayor, se busca por la izquierda
         }
+        return false;
     }
     
     
