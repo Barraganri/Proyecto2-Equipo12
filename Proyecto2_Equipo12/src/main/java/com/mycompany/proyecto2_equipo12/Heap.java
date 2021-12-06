@@ -10,7 +10,8 @@ import java.util.Queue;
  */
 
 /**
- *
+ * Clase que contienes los atributos y funciones para la
+ * construcción de un Heap
  * @author dani_
  */
 public class Heap {
